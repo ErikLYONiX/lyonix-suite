@@ -1,3 +1,6 @@
+# Add this near the top
+import numpy as np
+from sklearn.metrics.pairwise import cosine_similarity   # ← This is the problem
 # lyonix_demo.py
 # Clean single-file demo for xAI
 
