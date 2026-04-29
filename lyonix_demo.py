@@ -74,3 +74,4 @@ if __name__ == "__main__":
 
     print("\nLYONiX: Cryptographic fingerprinting + embedding similarity + provenance graph.")
     print("Designed for verifiable AI systems and content authenticity.")
+
