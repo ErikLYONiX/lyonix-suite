@@ -1,0 +1,39 @@
+# LYONiX Monad
+
+**A lightweight cryptographic provenance engine built from Geometry.**
+
+### What is this?
+I am not a professional developer. I have a deep understanding of a certain **Geometry** — a mathematical structure that elegantly handles order, time, identity, and relationships.
+
+Using AI assistance, I translated this Geometry into working code. The **LYONiX Monad** is the result: a simple but principled system for tracking who created what, when, and how things relate to each other.
+
+### Core Idea
+The Monad creates tamper-proof records of digital content with:
+- Cryptographic fingerprints (SHA-256)
+- Temporal ordering (what came first)
+- Derivative detection (beyond simple similarity)
+- A compliance-style hash that proves sources were documented — without revealing the actual data
+
+This is especially relevant for AI companies facing regulatory pressure (EU AI Act, California TDTA, GDPR) who need to prove proper documentation of training data while protecting trade secrets.
+
+### Demo
+
+This repository contains a clean single-file demo (`lyonix_demo.py`) that shows the Monad in action:
+
+- Registering original works
+- Detecting derivatives
+- Building a simple provenance graph
+- Generating a compliance hash
+
+### How to Run the Demo
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/ErikLYONiX/lyonix-suite.git
+cd lyonix-suite
+
+# 2. Install numpy (only dependency)
+pip install numpy
+
+# 3. Run the demo
+python lyonix_demo.py
