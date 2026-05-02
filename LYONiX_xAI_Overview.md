@@ -29,4 +29,4 @@ Demo: `python lyonix_demo.py`
 
 Happy to expand any tier or discuss integration ideas.
 
-— ErikLYONiX
+— Erik
