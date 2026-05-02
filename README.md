@@ -8,6 +8,12 @@ LYONiX tracks who created what, when, and detects derivatives using cryptography
 Combine tamper-proof timestamps (Monad Core) with a graph that shows content relationships. Perfect for the age of generative AI.
 
 ### Tier System (Roadmap)
+### How to Run Demo
+
+```bash
+git clone https://github.com/ErikLYONiX/lyonix-suite.git
+cd lyonix-suite
+python lyonix_demo.py
 
 | Tier | Name                    | What it does                                      | Status      |
 |------|-------------------------|---------------------------------------------------|-------------|
