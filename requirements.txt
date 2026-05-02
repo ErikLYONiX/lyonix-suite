@@ -1,0 +1,2 @@
+# LYONiX Suite
+# Pure Python - No external dependencies required
