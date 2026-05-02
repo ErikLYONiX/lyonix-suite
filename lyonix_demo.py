@@ -1,77 +1,43 @@
 
-# lyonix_demo.py
-# Professional demo for xAI - Real-time AI Provenance & Derivative Detection
+# =============================================
+# LYONiX Suite - Demo
+# Lightweight Provenance & Derivative Tracking
+# =============================================
 
 import hashlib
-import numpy as np
-from collections import defaultdict
+from datetime import datetime
 
-def cosine_sim(a, b):
-    """Fast cosine similarity."""
-    a = a.astype(float)
-    b = b.astype(float)
-    return np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b) + 1e-9)
+print("🚀 LYONiX Suite Demo")
+print("Graph-based Provenance for AI Content\n")
 
-class LYONiX:
-    """LYONiX: Graph-based provenance engine for AI content."""
+def create_lyo(content: str, creator: str):
+    """Create a tamper-proof LYO provenance unit"""
+    timestamp = datetime.now().isoformat()
+    data = f"{content}|{creator}|{timestamp}".encode('utf-8')
+    hash_value = hashlib.sha256(data).hexdigest()
+    
+    print(f"✅ LYO Created")
+    print(f"   Creator   : {creator}")
+    print(f"   Time      : {timestamp}")
+    print(f"   Hash      : {hash_value[:16]}...\n")
+    return {"content": content, "creator": creator, "time": timestamp, "hash": hash_value}
 
-    def __init__(self):
-        self.works = {}
-        self.graph = defaultdict(list)
+# Demo 1: Original creation
+print("=== Original Work ===")
+work1 = create_lyo(
+    "Artificial intelligence is transforming how we understand the universe.", 
+    "ErikLYONiX"
+)
 
-    def register(self, content: str, creator: str):
-        fp = hashlib.sha256(content.encode()).hexdigest()
-        emb = np.zeros(256, dtype=float)
-        for i in range(len(content) - 1):
-            c1 = ord(content[i].lower()) % 256
-            c2 = ord(content[i + 1].lower()) % 256
-            emb[c1] += 1.0
-            emb[c2] += 0.5
-        emb /= (np.sum(emb) + 1e-9)
+# Demo 2: Possible derivative
+print("=== Possible Derivative Work ===")
+work2 = create_lyo(
+    "AI is changing our understanding of the cosmos and reality.", 
+    "AnotherUser"
+)
 
-        self.works[fp] = {"creator": creator, "embedding": emb}
-        print(f"✓ Registered: {creator:<12} | {fp[:16]}...")
-
-    def detect_derivatives(self, new_content: str, threshold: float = 0.72):
-        """Detect derivatives and build provenance graph."""
-        new_emb = np.zeros(256, dtype=float)
-        for i in range(len(new_content) - 1):
-            c1 = ord(new_content[i].lower()) % 256
-            c2 = ord(new_content[i + 1].lower()) % 256
-            new_emb[c1] += 1.0
-            new_emb[c2] += 0.5
-        new_emb /= (np.sum(new_emb) + 1e-9)
-
-        matches = []
-        for fp, data in self.works.items():
-            sim = cosine_sim(new_emb, data["embedding"])
-            if sim > threshold:
-                self.graph[fp].append(round(sim, 3))
-                matches.append((data["creator"], round(sim, 3)))
-        return sorted(matches, key=lambda x: -x[1])
-
-
-if __name__ == "__main__":
-    print("=" * 70)
-    print("                  LYONiX DEMO")
-    print("       Real-time Provenance & Derivative Detection")
-    print("=" * 70 + "\n")
-
-    lx = LYONiX()
-
-    print("Registering original works...\n")
-    lx.register("High quality image of a futuristic city at night, cyberpunk style, neon lights, rain reflections", "Alice")
-    lx.register("Original melody: C E G A B in 128bpm electronic track with deep synth leads", "Bob")
-
-    print("\nDetecting derivatives from new AI-generated content...\n")
-    results = lx.detect_derivatives(
-        "Neon cyberpunk cityscape at midnight, pouring rain, dramatic reflections and glowing holographic signs v2"
-    )
-
-    print("Results:")
-    for creator, sim in results:
-        print(f"   → Strong derivative from {creator:<8} | Similarity: {sim:.3f}")
-
-    print("\nLYONiX: Cryptographic fingerprinting + embedding similarity + provenance graph.")
-    print("Designed for verifiable AI systems and content authenticity.")
-
+print("=== Summary ===")
+print("• Cryptographic hashing provides tamper-proof records")
+print("• Timestamps prove what came first")
+print("• Next: Add similarity detection + graph connections between works")
+print("\nLYONiX is ready for higher tiers (Graph, Semantic Similarity, Reasoning)")
