@@ -23,10 +23,16 @@ def create_lyo(content: str, creator: str):
 
 # Demo
 print("=== Original Work ===")
-work1 = create_lyo("Artificial intelligence is transforming how we understand the universe.", "ErikLYONiX")
+work1 = create_lyo(
+    "Artificial intelligence is transforming how we understand the universe.", 
+    "ErikLYONiX"
+)
 
 print("=== Possible Derivative ===")
-work2 = create_lyo("AI is changing our understanding of the cosmos.", "AnotherUser")
+work2 = create_lyo(
+    "AI is changing our understanding of the cosmos.", 
+    "AnotherUser"
+)
 
 print("=== Summary ===")
 print("• Cryptographic records for provenance")
