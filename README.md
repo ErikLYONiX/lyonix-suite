@@ -1,14 +1,23 @@
-# LYONiX
+---
 
-**Graph-based digital provenance engine.**
+### **2. lyonix-suite Repository — README**
 
-### Core Components
-- Cryptographic fingerprinting (SHA-256)
-- Bigram frequency embeddings (256-dim)
-- Cosine similarity for derivative detection
-- Directed graph for provenance/lineage tracking
+```markdown
+# LYONiX - Provenance & Suite
 
-### Demo
-```bash
-pip install numpy
-python lyonix_demo.py
+Immutable provenance tracking and verification engine with geometric resonance principles.
+
+## Core Capabilities
+
+- **Provenance Engine**: Immutable tracking with resonance-based verification
+- **Security Layer**: Advanced integrity features
+- **Integration Tools**: Easy connection to existing systems
+
+## Quick Example
+
+```python
+from lyonix.provenance import LyonixProvenanceEngine
+
+engine = LyonixProvenanceEngine()
+entry_hash = engine.record(data, context="grok_analysis")
+status = engine.verify(entry_hash)
