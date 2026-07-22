@@ -9,6 +9,6 @@ Combines the Monad Core with robust provenance tracking for secure, traceable in
 - Integration with Monad Core
 - Cryptographic signing support
 
-**License**: MIT (see LICENSE file)
+**License**: MIT
 
-**Status**: Production-ready foundation for the LYONiX System SLS
+**Status**: Production-ready with working examples and benchmarks.
