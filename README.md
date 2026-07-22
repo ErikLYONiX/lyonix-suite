@@ -1,23 +1,14 @@
----
+# LYONiX System SLS — Suite
 
-### **2. lyonix-suite Repository — README**
+**Provenance + Monad Core Integration**
 
-```markdown
-# LYONiX - Provenance & Suite
+The LYONiX Suite combines the Monad Core with Provenance tracking for secure, traceable intelligence.
 
-Immutable provenance tracking and verification engine with geometric resonance principles.
+## Features
+- Immutable provenance tracking
+- Derivative detection
+- Integration with Monad Core
 
-## Core Capabilities
+**License**: MIT (see LICENSE file)
 
-- **Provenance Engine**: Immutable tracking with resonance-based verification
-- **Security Layer**: Advanced integrity features
-- **Integration Tools**: Easy connection to existing systems
-
-## Quick Example
-
-```python
-from lyonix.provenance import LyonixProvenanceEngine
-
-engine = LyonixProvenanceEngine()
-entry_hash = engine.record(data, context="grok_analysis")
-status = engine.verify(entry_hash)
+**Status**: Production-ready foundation for the LYONiX System SLS
