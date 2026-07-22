@@ -2,12 +2,12 @@
 
 **Provenance + Monad Core Integration**
 
-The LYONiX Suite combines the Monad Core with Provenance tracking for secure, traceable intelligence.
+Combines the Monad Core with robust provenance tracking for secure, traceable intelligence.
 
 ## Features
-- Immutable provenance tracking
-- Derivative detection
+- Immutable provenance tracking with derivative detection
 - Integration with Monad Core
+- Cryptographic signing support
 
 **License**: MIT (see LICENSE file)
 
