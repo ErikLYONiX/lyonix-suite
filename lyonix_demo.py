@@ -25,7 +25,7 @@ class LYONiXProvenance:
     def register(self, content: str, creator: str, metadata: Dict = None):
         fp = hashlib.sha256(content.encode()).hexdigest()
         emb = self._embedding(content)
-        signature = hashlib.sha256((fp + creator).encode()).hexdigest()
+        signature = hashlib.sha256((fp + creator + str(datetime.now())).encode()).hexdigest()
         
         self.works[fp] = {
             "creator": creator,
@@ -56,6 +56,13 @@ class LYONiXProvenance:
                 "signatures": self.signatures
             }, f, indent=2)
         print(f"✅ Provenance saved to {filename}")
+    
+    def load_from_file(self, filename: str = "provenance.json"):
+        with open(filename, 'r') as f:
+            data = json.load(f)
+            self.works = data["works"]
+            self.signatures = data["signatures"]
+        print(f"✅ Provenance loaded from {filename}")
 
 if __name__ == "__main__":
     provenance = LYONiXProvenance()
