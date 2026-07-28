@@ -58,4 +58,4 @@ The same primitives can be extended into specialized “intelligence tiers” fo
 ## Quick Start
 
 ```bash
-python lyonix_integrated_demo.py
+python lyonix_demo.py
