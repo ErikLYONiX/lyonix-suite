@@ -13,9 +13,11 @@ Local-first framework that combines:
 ```bash
 pip install numpy
 python lyonix_demo.py
+
 ---
 
-What It Can Become (Future Potential)
+What the LYONiX Monad Core Framework Can Become (Future Potential)
+
 With continued development, LYONiX is designed to grow into a broader intelligence and provenance layer capable of supporting:
 
 DomainPotential Use CasesAI & Training
@@ -37,8 +39,6 @@ Robotics / Edge SystemsOn-device reasoning with provenance (Tesla, SpaceX, etc.)
 The Monad Core’s multi-perspective and multi-scale design is intentionally general.
 
 The same primitives can be extended into specialized “intelligence tiers” for different domains while keeping a common provenance backbone.
-
----
 
 
 ## Quick Start
