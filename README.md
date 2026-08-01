@@ -1,32 +1,18 @@
-# LYONiX System SLS
 
-**Lightweight Provenance + Multi-Perspective Reasoning for the AI Era**
+# LYONiX System SLS — Suite
 
-LYONiX is a local-first framework that combines **immutable provenance tracking** with a **geometric multi-perspective reasoning engine** (the Monad Core).  
+**Provenance + multi-perspective reasoning for the AI era**
 
-It is designed to help prove originality, detect derivatives, and support more transparent, multi-view reasoning — especially useful for AI-generated content, training data lineage, and scientific or simulation workflows.
+Creator: **Erik L. Palmer**
 
----
+Local-first framework that combines:
 
-## What It Is (Current Capabilities)
+1. **Provenance engine** — SHA-256 fingerprints, HMAC integrity, derivative detection, lineage graph  
+2. **Monad Core (embedded)** — multi-view disagreement for stability / regime signals  
 
-- **Provenance Engine**
-  - Cryptographic fingerprinting (SHA-256)
-  - HMAC signing for integrity verification
-  - Derivative detection via embedding similarity
-  - Directed graph for lineage tracking
-
-- **Monad Core**
-  - Multi-scale dimension jumping
-  - Multi-Vantage Point (MVP) analysis
-  - Disagreement potential scoring
-  - Lightweight, NumPy-based geometric reasoning
-
-- **Integrated System**
-  - Unified API combining provenance + multi-perspective analysis
-  - Working domain demos (time-series / stock-style analysis, weather/climate toy model)
-  - Extremely fast performance (sub-millisecond multi-view analysis on typical data)
-
+```bash
+pip install numpy
+python lyonix_demo.py
 ---
 
 What It Can Become (Future Potential)
